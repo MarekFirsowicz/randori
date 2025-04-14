@@ -1,0 +1,50 @@
+@use 'vars' as*;
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+
+body{
+    font-size: 1.6rem;
+    font-family: $main_font;
+    display: flex;
+    justify-content: center;
+    
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap:1rem;
+  width:100vw;
+  width: 100dvw;
+  max-width: 800px;
+  height: 1000vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+
+input[type="number"] {
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    
+    -moz-appearance: textfield;
+  }

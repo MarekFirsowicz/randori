@@ -1,0 +1,129 @@
+$settingsBtnsize: 36px;
+$slideHide: 240px;
+$size: 40px;
+$colorInputSize: 34px;
+.settings{
+    position: absolute;
+    left:-$slideHide;
+    top:0;
+    height: 100vh;
+    height: 100dvh;
+    z-index: 1000;
+    width: $slideHide;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 0.5rem;
+    transition: left 0.5s ease;
+    .settingsBtn{
+        position: absolute;
+        top: 0.1rem;
+        border:none;
+        border-radius: 50%;
+        cursor: pointer;
+        right: -36px;
+        font-size: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(0deg);
+        transition: transform 0.5s ease;
+
+        .fa-icon, svg {
+            pointer-events: none;
+            color: orangered
+          }
+    }
+    .settingsBtnRotate{
+        transform: rotate(360deg);
+    }
+    
+    .players{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        .playerSettings{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            
+            
+            input[name="name"] {
+                width: 130px;
+                height: 24px;
+                border-radius: 5px;
+                padding: 0 5px;
+                outline: none;
+              };
+            input[type="color"]{
+                width:$colorInputSize;
+                height: $colorInputSize;
+                border-radius: 5px;
+                border: 2px solid #ccc;
+                border-radius: 50%;
+                padding: 0;
+                cursor: pointer;
+                // Removes default browser styling
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+        
+                &::-webkit-color-swatch-wrapper {
+                    padding: 0;
+                    border-radius: 8px;
+                }
+        
+                &::-webkit-color-swatch {
+                    border: none;
+                    border-radius: 8px;
+                }
+        
+                &::-moz-color-swatch {
+                    border: none;
+                    border-radius: 8px;
+                }
+        
+                &::-moz-focus-inner {
+                    border: 0;
+                }
+            };
+        }
+    }
+    
+    .timerSettings{
+        display: flex;
+            gap: 1rem;
+            flex-direction: column;
+            >div{
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            input[type="number"]{
+                width:$size;
+                height: $size;
+                border-radius: 50%;
+                border: none;
+                text-align: center;
+            };
+            button{
+                font-size: 42px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;                
+            }
+    }
+
+}
+
+.openSettings{
+    left: 0px;
+};
+
+
+

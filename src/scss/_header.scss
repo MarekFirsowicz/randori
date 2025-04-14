@@ -1,0 +1,15 @@
+@use 'vars' as*;
+
+
+
+header{
+    margin-left: 35px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    
+    h1{
+        font-size: 3rem;
+        font-weight: 700;
+    }   
+}

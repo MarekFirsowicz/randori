@@ -1,0 +1,63 @@
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;    
+    touch-action: manipulation;
+    .fa-icon, svg {
+        pointer-events: none;
+      }
+    
+}
+
+.scoreBtns{
+    .scoreDiv>button, .oseakomiDiv>button{
+        width: 64px; 
+        height: 64px;
+        font-size: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 1px solid black;
+        
+        .ippon{
+            scale: -1 1;
+            transform-origin: 52% center;
+            color: hsl(208, 79%, 30%);
+        }
+        .wazari{
+            rotate: 220deg;
+            transform-origin: 45% 60%;
+            color: hsl(208, 79%, 60%);            
+        }
+
+        .oseakomi{
+            scale: -1 -1;
+            color: #F9A825;
+            animation: rotateOseakomi 0.6s linear infinite alternate;
+        }
+
+        .yuko{
+            rotate: 150deg;
+            transform-origin: center 64%;
+            color: hsl(123, 41%, 65%);
+
+        }
+
+        .shido{
+            scale: -1 1;
+            rotate: 300deg;
+            color: #E53935;
+        }
+    }
+    
+}
+
+@keyframes rotateOseakomi {
+    0% {
+      rotate: -10deg;
+    }
+    100% {
+      rotate: 10deg;
+    }
+  }
